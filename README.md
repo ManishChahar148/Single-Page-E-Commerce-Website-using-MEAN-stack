@@ -6,5 +6,5 @@ To run the code:
 2. Go to Frontend folder and follow similar steps as above 
 3. Go to Backend folder open cmd and run the command: npm install -g node-modules
 4. also create a  empty folder named attach inside backend folder.
-5. install all the  files which are required in api .js file in the backend folder.
+5. install all the packages which are required in api .js file in the backend folder.
 
