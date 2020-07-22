@@ -1,4 +1,4 @@
-# Single-Page-Online-Shopping-Application-using-MEAN-stack
+# Single-Page-E-Commerce-Website-using-MEAN-stack
 This is a single page website designed using mean stack
 
 To run the code:
