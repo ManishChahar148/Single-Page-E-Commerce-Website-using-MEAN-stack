@@ -1,0 +1,19 @@
+#content: {
+	float: left;
+}
+#right{
+	float: right;
+	position: relative;
+	top: -320px;
+	right: 150px;
+}
+
+#btn{
+	background-color: #007bff;
+	/*border: 1px solid black;*/
+	padding-right: 16px;
+	padding-left: 16px;
+	padding-top: 8px;
+	padding-bottom:8px;
+	color:white;
+}

@@ -1,0 +1,55 @@
+<h3 style="padding-top:5px; ">
+	Order Details 
+</h3>
+<hr>
+<div *ngFor="let o of orderDataNotDelivered">
+    <div class="row bg-warning">
+    	<div class="col-2">
+    		<img src="http://localhost:7788/images/{{o.image}}" height="100px">
+    	</div>
+    	<div class="col-10">
+    		<p>ProductName : {{o.pname}}</p>
+    		<p>Brand : {{o.brand}}</p>
+    		<p>Price : {{o.price}}</p>
+    		
+    		<!-- <p>OrderId : {{orderId}}</p> -->
+            <p>Order Date : {{o.date_created | date:'fullDate'}}</p>
+            <p class="text-warning">Delivery Status : Your product is on it's way , it will be delivered soon</p>
+
+
+    	</div>
+    </div>
+
+	<hr>
+
+</div>
+<p class="text-info" style="font-size: 14px">Delivery Address : {{username}} , {{deliveryAdd}}</p>
+   <br>
+    <hr>
+<br>
+
+<div *ngFor="let o of orderDataDelivered">
+    <div class="row bg-success">
+        <div class="col-2">
+            <img src="http://localhost:7788/images/{{o.image}}" height="100px">
+        </div>
+        <div class="col-10">
+            <p>ProductName : {{o.pname}}</p>
+            <p>Brand : {{o.brand}}</p>
+            <p>Price : {{o.price}}</p>
+            
+            <!-- <p>OrderId : {{orderId}}</p> -->
+            <p>Order Date : {{o.date_created | date:'fullDate'}}</p>
+            <p class="text-success">Delivery Status : Product delivered Successfully</p>
+
+
+        </div>
+    </div>
+    <hr>
+
+</div>
+
+<!-- <p>Expected Delivery Date : {{deliveryDate | date:'fullDate'}}</p> -->
+
+
+

@@ -1,0 +1,51 @@
+<div class="row">
+<div *ngFor="let o of orderDataNotDelivered">
+
+<div class=" col-lg-4 col-sm-4 col-md-4 col-4 bg-warning">
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="http://localhost:7788/images/{{o.image}}" alt="Img not found">
+  <div class="card-body">
+    <h5 class="card-title">Orderd By : {{o.email}}</h5>
+    <p class="card-text">ProductName : {{o.pname}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Brand : {{o.brand}}</li>
+    <li class="list-group-item">Price : {{o.price | currency : 'INR'}}</li>
+    <li class="list-group-item">Order Date : {{o.date_created | date:'fullDate'}}</li>
+    <li class="list-group-item">Delivery Status : Not Delivered 
+    	<div class="text-right">
+    	<button class=" btn btn-success btn-sm"  (click)="markAsDelivered(o._id)">Mark as Delivered</button>
+    	</div>
+    </li>
+  </ul>
+  
+</div>
+</div>
+</div>
+</div>
+
+
+<br>
+
+<div class="row">
+<div *ngFor="let o of orderDataDelivered">
+
+<div class=" col-lg-4 col-sm-4 col-md-4 col-4 bg-success">
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="http://localhost:7788/images/{{o.image}}" alt="Img not found">
+  <div class="card-body">
+    <h5 class="card-title">Orderd By : {{o.email}}</h5>
+    <p class="card-text">ProductName : {{o.pname}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Brand : {{o.brand}}</li>
+    <li class="list-group-item">Price : {{o.price | currency : 'INR'}}</li>
+    <li class="list-group-item">Order Date : {{o.date_created | date:'fullDate'}}</li>
+    <li class="list-group-item">Delivery Status : Delivered 
+    </li>
+  </ul>
+  
+</div>
+</div>
+</div>
+</div>

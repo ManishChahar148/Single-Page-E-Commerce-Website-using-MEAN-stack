@@ -1,0 +1,68 @@
+
+	<div class="container">
+		<div class=" row">
+			<br>
+			<div class=" col-lg-5  mr-sm-auto brd ml-50">
+			<form class=" form" [formGroup]="myForm" (ngSubmit)="loginData()">
+				<div>
+					<img class="pos " src="assets/images/admin-img.png" height="70px" >
+					<span class="login100-form-title p-b-49 text-dark p-l-10 animated heartbeat">
+						Admin Login
+					</span>
+				</div>
+				<div *ngIf="errMsg" class="alert-danger alert">
+						{{errMsg}}
+					</div>
+					
+					<div class="form-group">
+						<label class="label-input100 text-dark"> Username</label>
+						<input class="form-control" type="text" name="name" placeholder="Type your username" formControlName="name" autocomplete="off">
+
+						<div *ngIf="myForm.controls.name.invalid &&  						myForm.controls.name.touched" class=" alert alert-danger">
+							<div  *ngIf="myForm.controls.name.errors.required">
+							*Required
+							</div>
+							
+						</div>
+					</div>
+				
+				
+					<div class="form-group">
+						<label class="label-input100 text-dark">Password</label>
+						<input class=" form-control" type="password" name="pass" placeholder="Type your password" formControlName="pass">
+
+										<div *ngIf="myForm.controls.pass.invalid &&  								  myForm.controls.pass.touched"  class=" alert alert-danger" >
+					<div *ngIf="myForm.controls.pass.errors.required">
+						*Required
+					</div>
+					
+				</div>
+					</div>
+				
+				
+
+				<div class="text-left  p-t-8">
+					<input type="checkbox" name=""> Remember me
+				</div>
+				<div class="text-right p-t-8 p-b-20 text-dark">
+					
+					<a href="#">
+						Update password?
+					</a>
+				</div>
+				
+				<div class="text-center">
+					<button class="btn btn-outline-primary btn-lg mb-5" type="submit" [disabled]="myForm.invalid"><span>Login</span></button>
+
+
+				</div>
+				
+				
+				
+			</form>
+		</div>
+		<!-- <div class="lg-sm-7">
+			<img src="assets/images/ad.jpg" class="mt-50 adpos" height="400px">
+		</div> -->
+		</div>
+</div>

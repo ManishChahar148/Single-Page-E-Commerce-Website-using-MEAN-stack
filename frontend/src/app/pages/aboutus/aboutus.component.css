@@ -1,0 +1,28 @@
+#top{
+    background-image: url(src/assets/img/about.jpg);
+    width: 100%;
+    background-repeat: no-repeat;
+    margin-top: 10px;
+    height: 350px;
+    position:sticky;
+    top: 50px;
+    z-index: -10;
+}
+
+#box{
+  width: 60%;
+  z-index: ;
+  height: 540px;
+  margin-left: 20%;
+  margin-right: 20%;
+  position: relative;
+  top: -60px;
+  background-color: #e2e9f0;
+  padding:15px;
+  text-align: center;
+  /*border: 1px solid black;*/
+  /*box-shadow: 2px 2px 2px 1px black;*/
+  
+
+}
+
